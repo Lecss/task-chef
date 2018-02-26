@@ -1,0 +1,31 @@
+.list-item {
+    display: flex;
+    list-style: none;
+}
+
+.list-item .task-details {
+    display: flex;
+    flex-grow: 2;
+    flex-flow: column;
+    align-items: flex-start;
+}
+
+.list-item .task-controls {
+    display: flex;
+    flex-grow: .5;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-item .task-complete {
+    text-decoration: line-through;
+    font-weight: 100;
+}
+
+.list-item i {
+    color: #ccc;
+}
+
+.list-item p {
+   margin:0px;
+}
