@@ -7,24 +7,17 @@ import { getTasks } from './state';
 
 import '../components/taskListItem.css';
 import '../components/addTask.css';
-import { markTaskDone } from './actions';
 
 export interface TasksProps {
     tasks: Task[];
-    onTaskDone: (taskId: string) => void;
 }
 
 class Tasks extends React.Component<TasksProps> {
-
-    handleTaskRemove = (taskId: string) => { 
-        this.props.onTaskDone(taskId);
-    }
-
     render() {
         return (
             <div>
                 <AddTask />
-                <TaskList tasks={this.props.tasks} onTaskDone={this.handleTaskRemove} />
+                <TaskList tasks={this.props.tasks} />
             </div>
         );
     }
@@ -38,7 +31,6 @@ const mapStateToProps = (state: any) => {
 
 const mapDispatchToProps = (dispatch: any) => {
     return {
-        onTaskDone: (taskId: string) => dispatch(markTaskDone(taskId))
     };
 };
 

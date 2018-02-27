@@ -22,6 +22,14 @@
     font-weight: 100;
 }
 
+.list-item .title-edit {
+    padding: .5em;
+    width: 40%;
+    min-width: 200px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
 .list-item i {
     color: #ccc;
 }
